@@ -1,0 +1,9 @@
+.footer-section-link {
+    font-size: 0.95rem;
+    color: white !important;
+}
+
+.footer-section-link > a {
+    color: rgb(226, 226, 226) !important;
+    padding-left: 10px;
+}

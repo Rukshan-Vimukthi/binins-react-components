@@ -1,0 +1,28 @@
+.header {
+    color: white !important;
+}
+
+.header-nav-item {
+    font-size: 1.0rem;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.header-nav-item:hover {
+    transform: scale(1.2);
+}
+
+.header-brand{
+    color: white !important;
+}
+
+.header-brand-highlight {
+    font-size: 1.1rem;
+    color: white !important;
+}
+
+@media (max-width: 830px) {
+    .header-nav-item {
+        font-size: 0.98rem;
+    }
+}

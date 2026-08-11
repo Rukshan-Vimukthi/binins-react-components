@@ -1,0 +1,38 @@
+.binins-carousel-button {
+    background-color: #000;
+    color: white;
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+    transform: scale(1.5, 2.0);
+    border-radius: 5px;
+}
+
+
+.binins-carousel-button:hover {
+    transform: scale(1.4);
+}
+
+
+.binins-carousel-item{
+    /* box-shadow: 0px 0px 15px 1px #0003; */
+    width: calc(100% / 3) !important;
+}
+
+@media (max-width: 768px) {
+    .binins-carousel-item{
+        width: calc(100% / 1) !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .binins-carousel-item {
+        width: calc(100% / 2) !important;
+    }
+}
+
+@media (min-width: 900px) {
+    .binins-carousel-item {
+        width: calc(100% / 3) !important;
+    }
+}

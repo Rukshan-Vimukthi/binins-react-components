@@ -1,0 +1,12 @@
+.review-card {
+    width: 350px;
+    height: 100%;
+}
+
+
+@media (max-width: 500px) {
+    .review-card {
+        width: 500px;
+        /* background-color: #000; */
+    }
+}

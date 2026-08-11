@@ -1,0 +1,17 @@
+.header-subheading {
+    font-size: default;
+}
+
+.section-paragraph {
+    font-size: inherit;
+}
+
+@media (max-width: 500px) {
+    .header-subheading {
+            font-size: 1.0em;
+    }
+    
+    .section-paragraph * {
+        font-size: 0.98em !important;
+    }
+}

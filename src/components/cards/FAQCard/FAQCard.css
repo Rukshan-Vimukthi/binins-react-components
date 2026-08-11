@@ -1,0 +1,19 @@
+.faq-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 20px 1px #5555;
+}
+
+.faq-card:hover {
+    transform: scale(1.02);
+}
+
+.faq-question {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.faq-answer {
+    font-size: 0.95em;
+    padding-top: 5px;
+}
