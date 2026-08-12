@@ -46,34 +46,88 @@ const Carousel: CarouselComponent = (props) => {
 
   return (
     <>
-      <Row style={{ width: "100%", height: "500px" }}>
-        <Col xs={1} className="d-flex align-items-center justify-content-end">
-          <button onClick={onPrevButtonClick} className="binins-carousel-button">
-            {" "}
-            &lt;{" "}
-          </button>
-        </Col>
-        <Col xs={10} className="overflow-x-hidden">
-          <Row
-            className="w-auto h-100 flex-nowrap align-items-center justify-content-evenly gap-5"
-            style={{
-              transform: `translateX(-${
-                currentCarouselItemIndex * (100 / visibleItems)
-              }%)`,
-              transition: "transform 0.4s ease",
-              zIndex: -1,
-            }}
+      {width <= 500 ? (
+        <Row className="binins-carousel">
+          <Col
+            xs={12}
+            className="d-flex align-items-center justify-content-center"
+            style={{zIndex: 10}}
           >
+            <button
+              onClick={onPrevButtonClick}
+              className="binins-carousel-button"
+            >
+              {" "}
+              &lt;{" "}
+            </button>
+          </Col>
+          <Col xs={12} className="binins-carousel-slides-container-parent">
+            <Row
+              className="binins-carousel-slides-container flex-nowrap align-items-center justify-content-evenly gap-5"
+              style={{
+                transform: `translateY(-${
+                  currentCarouselItemIndex * (100 / visibleItems)
+                }%)`,
+                transition: "transform 0.4s ease",
+                zIndex: -10,
+              }}
+            >
               {carouselItems}
-          </Row>
-        </Col>
-        <Col xs={1} className="d-flex align-items-center justify-content-start">
-          <button onClick={onNextButtonClick} className="binins-carousel-button">
-            {" "}
-            &gt;{" "}
-          </button>
-        </Col>
-      </Row>
+            </Row>
+          </Col>
+          <Col
+            xs={12}
+            className="d-flex align-items-center justify-content-center"
+            style={{zIndex: 10}}
+          >
+            <button
+              onClick={onNextButtonClick}
+              className="binins-carousel-button"
+            >
+              {" "}
+              &gt;{" "}
+            </button>
+          </Col>
+        </Row>
+      ) : (
+        <Row className="binins-carousel">
+          <Col xs={1} className="d-flex align-items-center justify-content-end">
+            <button
+              onClick={onPrevButtonClick}
+              className="binins-carousel-button binins-carousel-button-1"
+            >
+              {" "}
+              &lt;{" "}
+            </button>
+          </Col>
+          <Col xs={10} className="overflow-x-hidden">
+            <Row
+              className="w-auto h-100 flex-nowrap align-items-center justify-content-evenly gap-5"
+              style={{
+                transform: `translateX(-${
+                  currentCarouselItemIndex * (100 / visibleItems)
+                }%)`,
+                transition: "transform 0.4s ease",
+                zIndex: -1,
+              }}
+            >
+              {carouselItems}
+            </Row>
+          </Col>
+          <Col
+            xs={1}
+            className="d-flex align-items-center justify-content-start"
+          >
+            <button
+              onClick={onNextButtonClick}
+              className="binins-carousel-button binins-carousel-button-2"
+            >
+              {" "}
+              &gt;{" "}
+            </button>
+          </Col>
+        </Row>
+      )}
     </>
   );
 };
